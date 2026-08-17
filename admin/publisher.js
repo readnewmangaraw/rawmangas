@@ -749,11 +749,8 @@ $("publishBtn").onclick=async()=>{
 
         <img
           src="../../${path}"
-          alt="${escapeHTML(
-            title
-          )} 第${escapeHTML(
-            chapter
-          )}話"
+          alt="${escapeHTML(title)}"
+          title="${escapeHTML(title)}"
           loading="lazy"
         >
 
@@ -980,8 +977,8 @@ ${escapeHTML(title)}
 
 <img
 src="../../${coverPath}"
-alt="${escapeHTML(title)}
- 第${escapeHTML(chapter)}話"
+alt="${escapeHTML(title)}"
+title="${escapeHTML(title)}"
 >
 
 </div>

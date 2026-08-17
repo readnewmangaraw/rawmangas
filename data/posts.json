@@ -30,14 +30,13 @@
     "updatedAt": "2026-08-17T11:25:37.892Z"
   },
   {
-    "title": "ワンピース",
-    "chapter": "1191",
-    "slug": "test-chapter",
-    "path": "posts/test-chapter/index.html",
-    "cover": "images/test-chapter/title.svg",
+    "title": "ワンピース 第1191話",
+    "chapter": "第1191話",
+    "slug": "one-piece-1191",
+    "path": "posts/one-piece-1191/index.html",
+    "cover": "images/one-piece-1191/title.jpg",
     "images": [
-      "images/test-chapter/001.svg",
-      "images/test-chapter/002.svg"
+      "images/one-piece-1191/001.webp"
     ],
     "updatedAt": "2026-08-17T00:00:00.000Z"
   }

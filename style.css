@@ -253,31 +253,33 @@ footer p {
 
 }
 
-/* Chapter Page */
+/* ================================
+   CHAPTER PAGE
+================================ */
 
 .chapter-page {
-  padding: 35px 0 80px;
+  min-height: 70vh;
+  padding: 30px 0 90px;
 }
 
 .chapter {
-  max-width: 1050px;
+  width: 100%;
+  max-width: 1100px;
   margin: 0 auto;
 }
 
-.chapter-header {
-  text-align: center;
-  margin-bottom: 30px;
-}
+
+/* Breadcrumb */
 
 .breadcrumb {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 8px;
-  margin-bottom: 18px;
-  color: #7890aa;
-  font-size: 14px;
+  gap: 7px;
+  margin: 5px 0 18px;
+  color: #7187a0;
+  font-size: 13px;
 }
 
 .breadcrumb a {
@@ -285,76 +287,145 @@ footer p {
   font-weight: 700;
 }
 
+.breadcrumb span {
+  opacity: 0.7;
+}
+
+
+/* Chapter heading */
+
+.chapter-header {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
 .chapter-header h1 {
+  max-width: 950px;
   margin: 0 auto 12px;
-  max-width: 900px;
-  font-size: clamp(28px, 5vw, 48px);
-  line-height: 1.12;
+  font-size: clamp(30px, 5vw, 52px);
+  font-weight: 800;
+  line-height: 1.08;
+  letter-spacing: -1px;
 }
 
 .chapter-meta {
   margin: 0;
-  color: #91a7bd;
-  font-size: 16px;
+  color: #91a6bd;
+  font-size: 15px;
 }
 
+
+/* Red heading line */
+
+.chapter-header::after {
+  content: "";
+  display: block;
+  width: 55px;
+  height: 3px;
+  margin: 22px auto 0;
+  background: #ef3340;
+  border-radius: 10px;
+}
+
+
+/* Title image */
+
 .title-image {
-  max-width: 650px;
-  margin: 35px auto 45px;
-  padding: 8px;
-  background: #061426;
-  border: 1px solid #173552;
-  border-radius: 12px;
-  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.35);
+  width: min(680px, 100%);
+  margin: 0 auto 45px;
+  padding: 10px;
+  background: linear-gradient(
+    145deg,
+    #0a2038,
+    #061426
+  );
+  border: 1px solid #173a5c;
+  border-radius: 14px;
+  box-shadow:
+    0 20px 55px rgba(0, 0, 0, 0.45),
+    0 0 0 1px rgba(239, 51, 64, 0.04);
 }
 
 .title-image img {
   width: 100%;
   height: auto;
   display: block;
-  border-radius: 7px;
+  border-radius: 8px;
 }
 
+
+/* Reader */
+
 .chapter-content {
+  position: relative;
   width: 100%;
-  max-width: 950px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding: 10px;
-  background: #020711;
-  border: 1px solid #102b49;
-  border-radius: 10px;
+  padding: 12px;
+  background: #01050b;
+  border: 1px solid #102a45;
+  border-radius: 12px;
+  box-shadow:
+    0 20px 60px rgba(0, 0, 0, 0.35);
+}
+
+.chapter-content::before {
+  content: "MANGA READER";
+  display: block;
+  padding: 7px 4px 12px;
+  color: #657c96;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  text-align: center;
 }
 
 .chapter-content img {
   display: block;
   width: 100%;
+  max-width: 950px;
   height: auto;
-  margin: 0 auto 6px;
+  margin: 0 auto 7px;
 }
 
 .chapter-content img:last-child {
   margin-bottom: 0;
 }
 
+
+/* Navigation */
+
 .chapter-navigation {
   display: grid;
   grid-template-columns: 1fr auto 1fr;
-  gap: 12px;
-  margin-top: 35px;
+  align-items: center;
+  gap: 14px;
+  max-width: 1000px;
+  margin: 30px auto 0;
 }
 
 .chapter-button {
-  display: flex;
+  min-height: 48px;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  min-height: 48px;
-  padding: 0 20px;
-  background: #0a2038;
+  padding: 0 22px;
   border: 1px solid #173b5f;
   border-radius: 8px;
-  color: #dcecff;
+  background: #071a2e;
+  color: #dbeaff;
+  font-size: 14px;
   font-weight: 700;
-  transition: 0.2s ease;
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.chapter-button:hover {
+  background: #0c2945;
+  border-color: #ef3340;
+  transform: translateY(-2px);
 }
 
 .chapter-button:first-child {
@@ -365,45 +436,63 @@ footer p {
   justify-self: end;
 }
 
-.chapter-button:hover {
+.home-button {
+  min-width: 105px;
   background: #ef3340;
   border-color: #ef3340;
   color: #ffffff;
 }
 
-.home-button {
-  background: #ef3340;
-  border-color: #ef3340;
-  min-width: 100px;
+.home-button:hover {
+  background: #d92734;
+  border-color: #d92734;
 }
+
+
+/* Mobile */
 
 @media (max-width: 700px) {
 
   .chapter-page {
-    padding: 25px 0 55px;
+    padding: 22px 0 55px;
   }
 
   .chapter-header {
-    margin-bottom: 22px;
+    margin-bottom: 28px;
+  }
+
+  .breadcrumb {
+    font-size: 12px;
+    margin-bottom: 15px;
   }
 
   .chapter-header h1 {
-    font-size: 28px;
+    font-size: 29px;
+    letter-spacing: -0.5px;
   }
 
   .chapter-meta {
-    font-size: 14px;
+    font-size: 13px;
+  }
+
+  .chapter-header::after {
+    margin-top: 18px;
   }
 
   .title-image {
-    margin: 25px auto 30px;
-    padding: 5px;
-    border-radius: 9px;
+    padding: 6px;
+    margin-bottom: 30px;
+    border-radius: 10px;
   }
 
   .chapter-content {
-    padding: 4px;
-    border-radius: 7px;
+    padding: 5px;
+    border-radius: 8px;
+  }
+
+  .chapter-content::before {
+    padding: 5px 2px 9px;
+    font-size: 9px;
   }
 
   .chapter-content img {
@@ -413,18 +502,43 @@ footer p {
   .chapter-navigation {
     grid-template-columns: 1fr 1fr;
     gap: 8px;
+    margin-top: 22px;
   }
 
   .home-button {
     grid-column: 1 / -1;
     grid-row: 1;
     order: -1;
+    width: 100%;
   }
 
   .chapter-button {
     min-height: 44px;
-    padding: 0 10px;
-    font-size: 13px;
+    padding: 0 9px;
+    font-size: 12px;
   }
 
+}
+
+
+/* Japanese Typography */
+
+body {
+  font-family:
+    "Noto Sans JP",
+    "Hiragino Kaku Gothic ProN",
+    "Yu Gothic",
+    Arial,
+    sans-serif;
+}
+
+.hero p,
+.card-content p,
+.chapter-meta,
+.breadcrumb {
+  line-height: 1.8;
+}
+
+.card-content h3 {
+  word-break: break-word;
 }

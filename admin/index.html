@@ -1,47 +1,152 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>RawMangas 管理画面</title>
+<title>RawMangas Admin</title>
 <link rel="stylesheet" href="admin.css">
 </head>
 
 <body>
 
-<div class="admin">
+<div id="loginScreen" class="screen">
+  <div class="login-box">
+    <div class="brand">Raw<span>Mangas</span></div>
+    <h1>Admin Login</h1>
+    <p>Enter your GitHub token to continue.</p>
 
-  <h1>RawMangas 管理画面</h1>
+    <input
+      id="loginToken"
+      type="password"
+      placeholder="GitHub Personal Access Token"
+      autocomplete="off"
+    >
 
-  <p class="note">
-    GitHub Tokenは保存されません。
-  </p>
+    <button id="loginBtn">Login</button>
 
-  <label>GitHub Token</label>
-  <input id="token" type="password" placeholder="ghp_...">
+    <div id="loginStatus"></div>
+  </div>
+</div>
 
-  <label>マンガタイトル</label>
-  <input id="title" placeholder="ワンピース">
 
-  <label>話数</label>
-  <input id="chapter" placeholder="1176">
+<div id="adminScreen" class="hidden">
 
-  <label>英語Slug</label>
-  <input id="slug" placeholder="one-piece-1176">
+  <header class="admin-header">
 
-  <label>タイトル画像</label>
-  <input id="cover" type="file" accept="image/*">
+    <div>
+      <div class="brand">Raw<span>Mangas</span></div>
+      <small>Publisher Admin</small>
+    </div>
 
-  <label>マンガ画像</label>
-  <input id="pages" type="file" accept="image/*" multiple>
+    <button id="logoutBtn" class="logout">
+      Logout
+    </button>
 
-  <button id="publish">
-    GitHubへ公開
-  </button>
+  </header>
 
-  <div id="status"></div>
+
+  <main class="admin-main">
+
+    <section class="panel">
+
+      <div class="panel-title">
+        <div>
+          <h1 id="formTitle">Create New Post</h1>
+          <p>Create or edit a manga chapter.</p>
+        </div>
+
+        <button id="newPostBtn" class="secondary">
+          + New Post
+        </button>
+      </div>
+
+
+      <input type="hidden" id="editingPath">
+
+
+      <label>Post Title</label>
+      <input
+        id="postTitle"
+        type="text"
+        placeholder="Example: One Piece"
+      >
+
+
+      <label>Chapter Number</label>
+      <input
+        id="chapterNumber"
+        type="text"
+        placeholder="Example: 1176"
+      >
+
+
+      <label>English Slug</label>
+      <input
+        id="slug"
+        type="text"
+        placeholder="Example: one-piece-1176"
+      >
+
+
+      <label>Title Image</label>
+      <input
+        id="cover"
+        type="file"
+        accept="image/*"
+      >
+
+      <div id="currentCover" class="current-files"></div>
+
+
+      <label>Chapter Images</label>
+      <input
+        id="pages"
+        type="file"
+        accept="image/*"
+        multiple
+      >
+
+      <div class="help">
+        Select multiple images. They will be uploaded in filename order.
+      </div>
+
+
+      <div id="existingPages" class="current-files"></div>
+
+
+      <button id="publishBtn" class="publish">
+        Publish New Post
+      </button>
+
+      <div id="publishStatus"></div>
+
+    </section>
+
+
+    <section class="panel">
+
+      <div class="panel-title">
+        <div>
+          <h2>Existing Posts</h2>
+          <p>Edit or delete published posts.</p>
+        </div>
+
+        <button id="refreshBtn" class="secondary">
+          Refresh
+        </button>
+      </div>
+
+
+      <div id="postsList">
+        Loading posts...
+      </div>
+
+    </section>
+
+  </main>
 
 </div>
+
 
 <script src="publisher.js"></script>
 

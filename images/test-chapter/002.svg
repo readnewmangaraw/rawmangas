@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="1300" viewBox="0 0 900 1300">
+  <rect width="900" height="1300" fill="#eeeeee"/>
+  <rect x="40" y="40" width="820" height="520" fill="#cccccc"/>
+  <rect x="40" y="600" width="820" height="300" fill="#dddddd"/>
+  <rect x="40" y="940" width="400" height="320" fill="#cccccc"/>
+  <rect x="460" y="940" width="400" height="320" fill="#dddddd"/>
+  <text x="450" y="300" text-anchor="middle" fill="#333333" font-family="Arial" font-size="40">
+    MANGA PAGE 1
+  </text>
+  <text x="450" y="680" text-anchor="middle" fill="#333333" font-family="Arial" font-size="30">
+    TEST IMAGE
+  </text>
+</svg>

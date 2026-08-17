@@ -1,6 +1,4 @@
-cat > robots.txt <<'EOF'
 User-agent: *
 Allow: /
 
 Sitemap: https://readnewmangaraw.github.io/rawmangas/sitemap.xml
-EOF

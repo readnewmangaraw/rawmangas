@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RawMangas 管理画面</title>
+<link rel="stylesheet" href="admin.css">
+</head>
+
+<body>
+
+<div class="admin">
+
+  <h1>RawMangas 管理画面</h1>
+
+  <p class="note">
+    GitHub Tokenは保存されません。
+  </p>
+
+  <label>GitHub Token</label>
+  <input id="token" type="password" placeholder="ghp_...">
+
+  <label>マンガタイトル</label>
+  <input id="title" placeholder="ワンピース">
+
+  <label>話数</label>
+  <input id="chapter" placeholder="1176">
+
+  <label>英語Slug</label>
+  <input id="slug" placeholder="one-piece-1176">
+
+  <label>タイトル画像</label>
+  <input id="cover" type="file" accept="image/*">
+
+  <label>マンガ画像</label>
+  <input id="pages" type="file" accept="image/*" multiple>
+
+  <button id="publish">
+    GitHubへ公開
+  </button>
+
+  <div id="status"></div>
+
+</div>
+
+<script src="publisher.js"></script>
+
+</body>
+</html>

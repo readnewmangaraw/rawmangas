@@ -1,0 +1,66 @@
+*{box-sizing:border-box}
+
+body{
+  margin:0;
+  background:#030914;
+  color:#e8f1ff;
+  font-family:"Noto Sans JP",Arial,sans-serif
+}
+
+.admin{
+  width:min(700px,calc(100% - 30px));
+  margin:50px auto;
+  padding:30px;
+  background:#061426;
+  border:1px solid #173552;
+  border-radius:14px
+}
+
+h1{
+  margin:0 0 10px
+}
+
+.note{
+  color:#91a6bd;
+  font-size:13px;
+  margin-bottom:30px
+}
+
+label{
+  display:block;
+  margin:20px 0 7px;
+  font-weight:700
+}
+
+input{
+  width:100%;
+  padding:13px;
+  border-radius:7px;
+  border:1px solid #173b5f;
+  background:#030914;
+  color:#fff;
+  font-size:15px
+}
+
+button{
+  width:100%;
+  margin-top:30px;
+  padding:15px;
+  border:0;
+  border-radius:8px;
+  background:#ef3340;
+  color:#fff;
+  font-size:16px;
+  font-weight:800;
+  cursor:pointer
+}
+
+button:hover{
+  background:#d92734
+}
+
+#status{
+  margin-top:20px;
+  line-height:1.7;
+  white-space:pre-wrap
+}
